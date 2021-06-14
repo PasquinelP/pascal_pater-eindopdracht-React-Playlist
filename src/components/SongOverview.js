@@ -8,7 +8,7 @@ const SongOverview = () => {
   return (
     <div>
       <h1>Song overview</h1>
-      {/* <SongForm /> */}
+      <SongForm />
       <SongList />
     </div>
   );
