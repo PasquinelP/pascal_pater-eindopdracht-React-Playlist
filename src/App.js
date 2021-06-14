@@ -1,11 +1,14 @@
-
-import './App.css';
+import { AppProvider } from "./components/AppContext";
+import SongOverview from "./components/SongOverview";
 
 function App() {
   return (
-    <div className="App">
-      <p>Hallo React Playlist</p>
-    </div>
+    <AppProvider>
+      <div className="App">
+        <p>Hallo React Playlist from App</p>
+        <SongOverview />
+      </div>
+    </AppProvider>
   );
 }
 
