@@ -5,13 +5,13 @@ const Song = () => {
   const { songs } = useContext(AppContext);
 
   const song = songs.map((song) => (
-    <li key={song.id} value={song.title}>
-      <span>{song.title} </span>
-      <span>{song.artist} </span>
-      <span>{song.genre} </span>
-      <span>{song.rating}</span>
-    </li>
-  ))
+    <tr>
+      <td>{song.title}</td>
+      <td>{song.artist}</td>
+      <td>{song.genre}</td>
+      <td>{song.rating}</td>
+    </tr>
+  ));
 
   return (
     <>

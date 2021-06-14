@@ -2,14 +2,20 @@ import React from "react";
 import Song from "./Song";
 
 const SongList = () => {
- 
   return (
-    <div>
-      <h3>Songlist: </h3>
-      <ul>
-        <Song />
-      </ul>
-    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Song</th>
+          <th>Artist</th>
+          <th>Genre</th>
+          <th>Rating</th>
+        </tr>
+        </thead>
+        <tbody>
+          <Song />
+      </tbody>
+    </table>
   );
 };
 
