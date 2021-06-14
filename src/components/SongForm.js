@@ -1,50 +1,68 @@
 import React, { useState } from "react";
 
+const initialNewSong = {
+  newTitle: "",
+  newArtist: "",
+  newGenre: "",
+  newRating: "",
+};
+
+
+
 const SongForm = () => {
 
-const {title, artist, genre, rating} = useState();
+const [newSong, setNewSong] = useState(initialNewSong);
 
-const handleChange = () => {
-  
+const handleChange = (event) => {
+  const {name, value} = event.target;
+  setNewSong({...newSong, [name]: value,})
 }
 
+console.log(newSong)
+
   return (
-    <form
+    <>
+      <form
       // onSubmit={(e) => {
       //   handleClickAddGrocery(e, title);
       //   setTitle("");
       // }}
-    >
-      <input
-        type="text"
-        name="title"
-        value={title}
-        onChange={handleChange}
-        placeholder="Add song title"
-      />
-      <input
-        type="text"
-        name="artist"
-        value={artist}
-        onChange={handleChange}
-        placeholder="Add artist"
-      />
-      <input
-        type="text"
-        name="genre"
-        value={genre}
-        onChange={handleChange}
-        placeholder="Add genre"
-      />
-      <input
-        type="text"
-        name="rating"
-        value={rating}
-        onChange={handleChange}
-        placeholder="Add rating"
-      />
-      <button type="submit">Voeg toe</button>
-    </form>
+      >
+        <input
+          type="text"
+          name="newTitle"
+          value={newSong.newTitle}
+          onChange={handleChange}
+          placeholder="Add song title"
+        />
+        <input
+          type="text"
+          name="newArtist"
+          value={newSong.newArtist}
+          onChange={handleChange}
+          placeholder="Add artist"
+        />
+        <input
+          type="text"
+          name="newGenre"
+          value={newSong.newGenre}
+          onChange={handleChange}
+          placeholder="Add genre"
+        />
+        <input
+          type="text"
+          name="newRating"
+          value={newSong.newRating}
+          onChange={handleChange}
+          placeholder="Add rating"
+        />
+        <button type="submit">Voeg toe</button>
+      </form>
+
+      <p>
+        {newSong.newTitle} {newSong.newArtist}
+      </p>
+    </>
   );
 };
 
