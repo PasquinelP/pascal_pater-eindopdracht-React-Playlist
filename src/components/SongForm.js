@@ -74,7 +74,7 @@ const SongForm = () => {
           onChange={handleChange}
           placeholder="Add rating"
         />
-        <button type="submit">Voeg toe</button>
+        <button type="submit">Add new song</button>
       </form>
 
     </>
