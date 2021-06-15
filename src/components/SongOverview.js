@@ -4,10 +4,8 @@ import SongList from './SongList';
 
 const SongOverview = () => {
 
-
   return (
     <div>
-      <h1>Song overview</h1>
       <SongForm />
       <SongList />
     </div>

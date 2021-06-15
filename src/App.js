@@ -5,7 +5,6 @@ function App() {
   return (
     <AppProvider>
       <div className="App">
-        <p>Hallo React Playlist from App</p>
         <SongOverview />
       </div>
     </AppProvider>
