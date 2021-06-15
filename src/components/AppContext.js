@@ -21,8 +21,20 @@ export const AppProvider = (props) => {
     },
   ]);
 
+  const addSong = (event, newSong) => {
+    event.preventDefault();
+    const newItem = {
+      id: songs.length + 1,
+      title: newSong.newTitle,
+      artist: newSong.newArtist,
+      genre: newSong.newGenre,
+      rating: newSong.newRating,
+    };
+    setSongs((prevSongs) => [...prevSongs, newItem]);
+  };
+
   return (
-    <AppContext.Provider value={{songs, setSongs}}>
+    <AppContext.Provider value={{songs, setSongs, addSong}}>
       {props.children}
     </AppContext.Provider>
   );
