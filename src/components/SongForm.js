@@ -1,32 +1,47 @@
-import React, { useState } from "react";
-
-const initialNewSong = {
-  newTitle: "",
-  newArtist: "",
-  newGenre: "",
-  newRating: "",
-};
-
-
+import React, { useContext, useState } from "react";
+import { AppContext } from "./AppContext";
 
 const SongForm = () => {
+  const { addSong } = useContext(AppContext);
 
-const [newSong, setNewSong] = useState(initialNewSong);
+  const initialNewSong = {
+    newTitle: "",
+    newArtist: "",
+    newGenre: "",
+    newRating: "",
+  };
 
-const handleChange = (event) => {
-  const {name, value} = event.target;
-  setNewSong({...newSong, [name]: value,})
-}
+  const [newSong, setNewSong] = useState(initialNewSong);
+  const [message, setMessage] = useState("Enter a new song to the playlist");
 
-console.log(newSong)
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setNewSong({ ...newSong, [name]: value });
+  };
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    if (
+      newSong.newTitle !== "" &&
+      newSong.newArtist !== "" &&
+      newSong.newGenre !== "" &&
+      newSong.newRating !== ""
+    ) {
+      addSong(event, newSong);
+      setNewSong(initialNewSong);
+    } else {
+      setMessage("Please fill out all the fields");
+    }
+  };
 
   return (
     <>
+      <div>{message}</div>
+
       <form
-      // onSubmit={(e) => {
-      //   handleClickAddGrocery(e, title);
-      //   setTitle("");
-      // }}
+        onSubmit={(event) => {
+          onSubmit(event);
+        }}
       >
         <input
           type="text"
@@ -59,9 +74,6 @@ console.log(newSong)
         <button type="submit">Voeg toe</button>
       </form>
 
-      <p>
-        {newSong.newTitle} {newSong.newArtist}
-      </p>
     </>
   );
 };
