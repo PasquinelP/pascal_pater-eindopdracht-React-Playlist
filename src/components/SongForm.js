@@ -1,8 +1,8 @@
-import React, { useContext, useState } from "react";
-import { AppContext } from "./AppContext";
+import React, { useState } from "react";
+import useApp from "./useApp";
 
 const SongForm = () => {
-  const { addSong } = useContext(AppContext);
+  const { addSong } = useApp();
 
   const initialNewSong = {
     newTitle: "",
@@ -11,8 +11,10 @@ const SongForm = () => {
     newRating: "",
   };
 
+  const initalMessage = "Enter a new song to the playlist";
+
   const [newSong, setNewSong] = useState(initialNewSong);
-  const [message, setMessage] = useState("Enter a new song to the playlist");
+  const [message, setMessage] = useState(initalMessage);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -29,6 +31,7 @@ const SongForm = () => {
     ) {
       addSong(event, newSong);
       setNewSong(initialNewSong);
+      setMessage(initalMessage);
     } else {
       setMessage("Please fill out all the fields");
     }
