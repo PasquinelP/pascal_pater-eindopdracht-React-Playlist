@@ -5,7 +5,7 @@ import SongList from './SongList';
 const SongOverview = () => {
 
   return (
-    <div>
+    <div className="song-overview">
       <SongForm />
       <SongList />
     </div>

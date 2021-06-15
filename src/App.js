@@ -4,9 +4,9 @@ import SongOverview from "./components/SongOverview";
 function App() {
   return (
     <AppProvider>
-      <div className="App">
+      <main className="App">
         <SongOverview />
-      </div>
+      </main>
     </AppProvider>
   );
 }

@@ -39,7 +39,7 @@ const SongForm = () => {
 
   
   return (
-    <>
+    <div className="song-form">
       <div>{message}</div>
 
       <form
@@ -91,7 +91,7 @@ const SongForm = () => {
         </select>
         <button type="submit">Add new song</button>
       </form>
-    </>
+    </div>
   );
 };
 

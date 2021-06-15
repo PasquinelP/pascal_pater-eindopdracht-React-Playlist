@@ -5,7 +5,7 @@ const Song = () => {
   const { songs } = useApp();
 
   const song = songs.map((song) => (
-    <tr key={song.id}>
+    <tr className="song-list__item" key={song.id}>
       <td>{song.title}</td>
       <td>{song.artist}</td>
       <td>{song.genre}</td>
