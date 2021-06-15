@@ -11,10 +11,10 @@ const SongForm = () => {
     newRating: "",
   };
 
-  const initalMessage = "Enter a new song to the playlist";
+  const initialMessage = "Enter a new song to the playlist";
 
   const [newSong, setNewSong] = useState(initialNewSong);
-  const [message, setMessage] = useState(initalMessage);
+  const [message, setMessage] = useState(initialMessage);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -31,7 +31,7 @@ const SongForm = () => {
     ) {
       addSong(event, newSong);
       setNewSong(initialNewSong);
-      setMessage(initalMessage);
+      setMessage(initialMessage);
     } else {
       setMessage("Please fill out all the fields");
     }
