@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid grey;
+}
+
+th, td {
+  padding: 15px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ddd;
+}
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+th {
+  color: white;
+  background-color: black;
+}
