@@ -17,11 +17,15 @@ const useApp = () => {
     setSongs((prevSongs) => [...prevSongs, newItem]);
   };
 
+  const deleteSongList = () => {
+    setSongs([]);
+  };
 
   return {
     songs,
     setSongs,
     addSong,
+    deleteSongList,
   };
 
 }
