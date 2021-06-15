@@ -37,6 +37,7 @@ const SongForm = () => {
     }
   };
 
+  
   return (
     <>
       <div>{message}</div>
@@ -60,23 +61,36 @@ const SongForm = () => {
           onChange={handleChange}
           placeholder="Add artist"
         />
-        <input
-          type="text"
-          name="newGenre"
+        <select
           value={newSong.newGenre}
           onChange={handleChange}
-          placeholder="Add genre"
-        />
-        <input
-          type="text"
-          name="newRating"
+          name="newGenre"
+        >
+          <option value="">Add genre</option>
+          <option value="Blues">Blues</option>
+          <option value="Country">Country</option>
+          <option value="HipHop">HipHop</option>
+          <option value="Jazz">Jazz</option>
+          <option value="Nederpop">Nederpop</option>
+          <option value="Pop">Pop</option>
+          <option value="Reggae">Reggae</option>
+          <option value="Rock and Roll">Rock and Roll</option>
+          <option value="Rock">Rock</option>
+        </select>
+        <select
           value={newSong.newRating}
           onChange={handleChange}
-          placeholder="Add rating"
-        />
+          name="newRating"
+        >
+          <option value="">Select a rating</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
         <button type="submit">Add new song</button>
       </form>
-
     </>
   );
 };
