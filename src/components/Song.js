@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import { AppContext } from "./AppContext";
+import React from "react";
+import useApp from "./useApp";
 
 const Song = () => {
-  const { songs } = useContext(AppContext);
+  const { songs } = useApp();
 
   const song = songs.map((song) => (
     <tr key={song.id}>
