@@ -21,11 +21,17 @@ const useApp = () => {
     setSongs([]);
   };
 
+  const deleteListItem = (id) => {
+    const newSongList = songs.filter((song) => song.id !== id);
+    setSongs(newSongList);
+  }
+
   return {
     songs,
     setSongs,
     addSong,
     deleteSongList,
+    deleteListItem,
   };
 
 }
