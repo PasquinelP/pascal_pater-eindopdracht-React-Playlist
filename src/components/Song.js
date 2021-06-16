@@ -1,5 +1,6 @@
 import React from "react";
 import useApp from "./useApp";
+import DeleteIcon from "./DeleteIcon";
 
 const Song = () => {
   const { songs, deleteListItem } = useApp();
@@ -11,7 +12,9 @@ const Song = () => {
       <td>{song.genre}</td>
       <td>{song.rating}</td>
       <td>
-        <span onClick={() => deleteListItem(song.id)}>Delete</span>
+        <span onClick={() => deleteListItem(song.id)}>
+          <DeleteIcon />
+        </span>
       </td>
     </tr>
   ));
