@@ -16,6 +16,7 @@ const SongList = () => {
             <th>Artist</th>
             <th>Genre</th>
             <th>Rating</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
