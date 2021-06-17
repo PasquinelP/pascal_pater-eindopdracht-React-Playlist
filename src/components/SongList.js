@@ -5,7 +5,7 @@ import useApp from "./useApp";
 
 const SongList = () => {
 
-  const { deleteSongList, sortByTitle } = useApp();
+  const { deleteSongList, sortList, sortRating } = useApp();
 
   return (
     <div className="song-list">
@@ -13,11 +13,17 @@ const SongList = () => {
         <thead>
           <tr>
             <th>
-              <span onClick={sortByTitle}>Song</span>
+              <span onClick={sortList}>Title</span>
             </th>
-            <th>Artist</th>
-            <th>Genre</th>
-            <th>Rating</th>
+            <th>
+              <span onClick={sortList}>Artist</span>
+            </th>
+            <th>
+              <span onClick={sortList}>Genre</span>
+            </th>
+            <th>
+              <span onClick={sortRating}>Rating</span>
+            </th>
             <th></th>
           </tr>
         </thead>

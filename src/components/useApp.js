@@ -26,20 +26,32 @@ const useApp = () => {
     setSongs(newSongList);
   }
 
-  const sortByTitle = () => {
+  const sortList = (event) => {
+    const sortBy = event.target.innerText.toLowerCase();
     const songsList = [...songs];
-    // const ascending = a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1;
-    // const descending = b.title.toLowerCase() > a.title.toLowerCase() ? 1 : -1;
     if (sort === null || sort === false) {
       const sortedSongs = songsList.sort((a, b) =>
-        a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
+        a[sortBy].toLowerCase() > b[sortBy].toLowerCase() ? 1 : -1
       );
       setSort(true);
       setSongs(sortedSongs);
     } else if (sort === true) {
       const sortedSongs = songsList.sort((a, b) =>
-        b.title.toLowerCase() > a.title.toLowerCase() ? 1 : -1
+        b[sortBy].toLowerCase() > a[sortBy].toLowerCase() ? 1 : -1
       );
+      setSort(false);
+      setSongs(sortedSongs);
+    }
+  };
+
+  const sortRating = () => {
+    const songsList = [...songs];
+    if (sort === null || sort === false) {
+      const sortedSongs = songsList.sort((a, b) => a.rating - b.rating);
+      setSort(true);
+      setSongs(sortedSongs);
+    } else if (sort === true) {
+      const sortedSongs = songsList.sort((a, b) => b.rating - a.rating);
       setSort(false);
       setSongs(sortedSongs);
     }
@@ -51,7 +63,8 @@ const useApp = () => {
     addSong,
     deleteSongList,
     deleteListItem,
-    sortByTitle,
+    sortList,
+    sortRating,
   }
   
 }
