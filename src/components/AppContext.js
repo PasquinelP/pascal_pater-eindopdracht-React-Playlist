@@ -21,8 +21,10 @@ export const AppProvider = (props) => {
     },
   ]);
 
+  const [sort, setSort] = useState(null);
+
   return (
-    <AppContext.Provider value={{songs, setSongs}}>
+    <AppContext.Provider value={{songs, setSongs, sort, setSort}}>
       {props.children}
     </AppContext.Provider>
   );
