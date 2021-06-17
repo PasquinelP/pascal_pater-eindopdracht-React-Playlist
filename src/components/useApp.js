@@ -3,7 +3,7 @@ import { AppContext } from './AppContext';
 
 const useApp = () => {
 
-  const { songs, setSongs } = useContext(AppContext);
+  const { songs, setSongs, sort, setSort } = useContext(AppContext);
 
   const addSong = (event, newSong) => {
     event.preventDefault();
@@ -28,10 +28,21 @@ const useApp = () => {
 
   const sortByTitle = () => {
     const songsList = [...songs];
-    const sortedSongs = songsList.sort((a, b) =>
-      a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
-    );
-    setSongs(sortedSongs);
+    // const ascending = a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1;
+    // const descending = b.title.toLowerCase() > a.title.toLowerCase() ? 1 : -1;
+    if (sort === null || sort === false) {
+      const sortedSongs = songsList.sort((a, b) =>
+        a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
+      );
+      setSort(true);
+      setSongs(sortedSongs);
+    } else if (sort === true) {
+      const sortedSongs = songsList.sort((a, b) =>
+        b.title.toLowerCase() > a.title.toLowerCase() ? 1 : -1
+      );
+      setSort(false);
+      setSongs(sortedSongs);
+    }
   };
 
   return {
