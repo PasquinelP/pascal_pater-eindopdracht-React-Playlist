@@ -26,14 +26,23 @@ const useApp = () => {
     setSongs(newSongList);
   }
 
+  const sortByTitle = () => {
+    const songsList = [...songs];
+    const sortedSongs = songsList.sort((a, b) =>
+      a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
+    );
+    setSongs(sortedSongs);
+  };
+
   return {
     songs,
     setSongs,
     addSong,
     deleteSongList,
     deleteListItem,
-  };
-
+    sortByTitle,
+  }
+  
 }
 
 export default useApp;
