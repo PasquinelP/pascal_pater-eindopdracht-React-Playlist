@@ -1,3 +1,8 @@
+/* ------------------------------- 
+    Eindopdracht Pascal Pater
+    React Playlist
+   ------------------------------- */
+
 /* Base */
 
 *,
@@ -34,7 +39,6 @@ button {
   appearance: none;
   border: 1px solid transparent;
   padding: 8px 12px;
-  /* background-color: #d3d3d3; */
   border-radius: 3px;
   font-size: 14px;
   background-color: #0099dc;
@@ -48,7 +52,7 @@ button:hover {
   cursor: pointer;
 }
 
-header.page-header {
+.page-header {
   background-color: #282b32;
   padding: 0 10px;
 }
@@ -69,7 +73,7 @@ header.page-header {
 }
 
 .app-nav__list a:first-child {
-    margin-right: 20px;
+  margin-right: 30px;
 }
 
 .app-nav__item {
@@ -92,15 +96,14 @@ main {
 /* Form for entering new song */
 
 .song-form {
-    box-shadow: -10px 8px 18px 0px rgba(0,0,0,0.3);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 5px;
-    background-color: antiquewhite;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5px;
+  background-color: #faebd7;
 }
 
 .song-form__message {
@@ -119,8 +122,7 @@ main {
   flex-wrap: wrap;
 }
 
-
-input, select {
+.song-form__entry input, select {
   color: #222;
   font-size: 12px;
   padding: 8px;
@@ -128,40 +130,68 @@ input, select {
   border: 1px solid #B1BEC1;
   border-radius: 8px;
   outline: none;
-
 }
 
-input:focus {
+.song-form__entry input:focus {
   border: 1px solid #0099dc;
 }
 
 
-/* Song list table */
+/* Song list */
 
-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
-  border: 2px solid grey;
+.song-list {
+    margin-bottom: 20px;
 }
 
-th, td {
+.song-list table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid grey;
+  margin-bottom: 20px;
+}
+
+.song-list th, td {
   padding: 12px;
 }
 
-tbody tr:nth-child(even) {
-  /* background-color: #ddd; */
+.song-list tbody tr:nth-child(even) {
   background-color: #dae5f4;
 }
-tbody tr:nth-child(odd) {
+
+.song-list tbody tr:nth-child(odd) {
   background-color: #fff;
 }
-th {
+
+.song-list th {
   color: #fff;
   background-color: #282b32;
+  text-align: left;
 }
 
+.song-list th span {
+  cursor: pointer;
+}
 
+.song-list th span:hover {
+  text-decoration: underline;
+}
+
+/* icon to delete individual song */
+.delete-icon:hover {
+  fill: #D8000C;
+  cursor: pointer;
+}
+
+/* delete button of complete song list */
+.song-list__delete {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-page {
+    padding: 20px 40px;
+    font-size: 16px;
+}
 
 footer {
   background-color: #282b32;
