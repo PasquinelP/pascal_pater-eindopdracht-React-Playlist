@@ -15,6 +15,7 @@ const SongForm = () => {
 
   const [newSong, setNewSong] = useState(initialNewSong);
   const [message, setMessage] = useState(initialMessage);
+  const [errorMessage, setErrorMessage] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -32,20 +33,29 @@ const SongForm = () => {
       addSong(event, newSong);
       setNewSong(initialNewSong);
       setMessage(initialMessage);
+      setErrorMessage(false);
     } else {
       setMessage("Please fill out all the fields");
+      setErrorMessage(true);
     }
   };
 
   
   return (
     <div className="song-form">
-      <div>{message}</div>
+      <div
+        className={`song-form__message ${
+          errorMessage ? "song-form__message--error" : ""
+        }`}
+      >
+        {message}
+      </div>
 
       <form
         onSubmit={(event) => {
           onSubmit(event);
         }}
+        className="song-form__entry"
       >
         <input
           type="text"
