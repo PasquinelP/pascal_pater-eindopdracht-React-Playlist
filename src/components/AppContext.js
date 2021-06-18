@@ -4,6 +4,7 @@ export const AppContext = createContext();
 
 export const AppProvider = (props) => {
 
+  // holds the songs added in the playlist en provides some starting content
   const [songs, setSongs] = useState([
     {
       id: 1,
@@ -49,6 +50,7 @@ export const AppProvider = (props) => {
     },
   ]);
 
+  // sets if sorting is ascending or descending
   const [sort, setSort] = useState(null);
 
   return (
