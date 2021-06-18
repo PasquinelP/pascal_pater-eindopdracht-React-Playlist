@@ -31,9 +31,9 @@ const SongList = () => {
           <Song />
         </tbody>
       </table>
-      <button className="song-list__delete" onClick={deleteSongList}>
-        Empty playlist
-      </button>
+      <div className="song-list__delete">
+        <button onClick={deleteSongList}>Empty playlist</button>
+      </div>
     </div>
   );
 };
