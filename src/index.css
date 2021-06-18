@@ -22,6 +22,7 @@ body {
 h1 {
   text-align: center;
   color: #fff;
+  font-size: 36px;
 }
 
 ul {
@@ -49,7 +50,30 @@ button:hover {
 
 header.page-header {
   background-color: #282b32;
-  padding: 20px 10px;
+  padding: 0 10px;
+}
+
+.app-nav__list {
+  display: flex;
+  justify-content: center;
+}
+
+.app-nav__list a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.app-nav__list a:hover, .app-nav__list a.selected {
+  text-decoration: underline 2px #0099dc;
+  text-underline-offset: 4px;
+}
+
+.app-nav__list a:first-child {
+    margin-right: 20px;
+}
+
+.app-nav__item {
+  font-size: 18px;
 }
 
 .app {
@@ -68,7 +92,8 @@ main {
 /* Form for entering new song */
 
 .song-form {
-    box-shadow: 0 0 8px rgba(20, 13, 65, 0.45);
+    box-shadow: -10px 8px 18px 0px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -125,13 +150,14 @@ th, td {
 }
 
 tbody tr:nth-child(even) {
-  background-color: #ddd;
+  /* background-color: #ddd; */
+  background-color: #dae5f4;
 }
 tbody tr:nth-child(odd) {
   background-color: #fff;
 }
 th {
-  color: white;
+  color: #fff;
   background-color: #282b32;
 }
 
