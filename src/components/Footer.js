@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <p>
-        Pascal Pater - Eindopdracht React Playlist voor Winc
+        &copy; 2021 - Pascal Pater - Eindopdracht React Playlist voor Winc
         Academy Front-end Development opleiding
       </p>
     </footer>
