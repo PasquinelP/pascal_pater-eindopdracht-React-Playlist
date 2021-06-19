@@ -146,6 +146,7 @@ main {
 .song-list__message {
   font-size: 12px;
   font-style: italic;
+  margin-bottom: 3px;
 }
 
 .song-list table {
