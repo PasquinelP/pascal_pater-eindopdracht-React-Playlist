@@ -23,6 +23,8 @@ const useApp = () => {
 
   const deleteListItem = (id) => {
     const newSongList = songs.filter((song) => song.id !== id);
+    // renumber the id's to avoid duplicates of same id when adding new item after an item has been removed
+    newSongList.map((song, index) => (song.id = index + 1));
     setSongs(newSongList);
   }
 
