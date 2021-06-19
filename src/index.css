@@ -69,7 +69,7 @@ button:hover {
 
 .app-nav__list a:hover, .app-nav__list a.selected {
   text-decoration: underline 2px #0099dc;
-  text-underline-offset: 4px;
+  text-underline-offset: 6px;
 }
 
 .app-nav__list a:first-child {
@@ -143,10 +143,15 @@ main {
     margin-bottom: 20px;
 }
 
+.song-list__message {
+  font-size: 12px;
+  font-style: italic;
+}
+
 .song-list table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid grey;
+  border-bottom: 1px solid #808080;
   margin-bottom: 20px;
 }
 
