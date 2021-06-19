@@ -9,6 +9,7 @@ const SongList = () => {
 
   return (
     <div className="song-list">
+      <div className="song-list__message">* to sort click on column names</div>
       <table>
         <thead>
           <tr>
