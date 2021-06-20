@@ -3,9 +3,9 @@ import useApp from "./useApp";
 import DeleteIcon from "./DeleteIcon";
 
 const Song = () => {
-  const { songs, deleteListItem } = useApp();
+  const { songs, deleteListItem, filteredList } = useApp();
 
-  const song = songs.map((song) => (
+  const song = filteredList.map((song) => (
     <tr className="song-list__item" key={song.id}>
       <td>{song.title}</td>
       <td>{song.artist}</td>
