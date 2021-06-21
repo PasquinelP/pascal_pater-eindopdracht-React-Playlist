@@ -3,7 +3,7 @@ import { AppContext } from './AppContext';
 
 const useApp = () => {
 
-  const { songs, setSongs, sort, setSort, filteredGenre, setFilteredGenre } = useContext(AppContext);
+  const { songs, setSongs, sort, setSort, filteredGenre, setFilteredGenre, filteredRating, setFilteredRating } = useContext(AppContext);
 
   const addSong = (event, newSong) => {
     event.preventDefault();
@@ -12,7 +12,7 @@ const useApp = () => {
       title: newSong.newTitle,
       artist: newSong.newArtist,
       genre: newSong.newGenre,
-      rating: newSong.newRating,
+      rating: parseInt(newSong.newRating),
     };
     setSongs((prevSongs) => [...prevSongs, newItem]);
   };
@@ -54,9 +54,10 @@ const useApp = () => {
     setFilteredGenre(value);
   };
 
-  let filteredList = songs.filter((song) => {
-    return song.genre.includes(filteredGenre);
-  });
+  const handleRatingChange = (event) => {
+    const { value } = event.target;
+    setFilteredRating(value);
+  };
 
   return {
     songs,
@@ -67,8 +68,12 @@ const useApp = () => {
     sortList,
     sortRating,
     handleGenreChange,
-    filteredList,
-  }
+    handleRatingChange,
+    filteredGenre,
+    setFilteredGenre,
+    filteredRating,
+    setFilteredRating,
+  };
   
 }
 
