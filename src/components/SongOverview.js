@@ -1,6 +1,6 @@
 import React from 'react';
 import SongForm from './SongForm';
-import SongList from './SongList';
+import SongContainer from './SongContainer';
 import SongActions from './SongActions';
 
 const SongOverview = () => {
@@ -8,7 +8,7 @@ const SongOverview = () => {
   return (
     <div className="song-overview">
       <SongForm />
-      <SongList />
+      <SongContainer />
       <SongActions />
     </div>
   );
