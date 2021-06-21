@@ -6,6 +6,7 @@ import Song from "./Song";
 const SongList = () => {
   const { songs, filteredGenre, filteredRating } = useApp();
 
+  // store copy of songs in variable
   let filteredList = [...songs];
 
   // filtering for genre
