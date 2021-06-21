@@ -30,3 +30,8 @@ Naast deze bovenstaande Core Functionaliteiten zijn jullie verplicht om 3 extra 
 ## Design 
 
 Deze week ligt de focus 100% op React. Binnen React komt alle "logica" en functionaliteit uit het gebruik van JavaScript met praktijkvoorbeelden. CSS moet het laatste zijn waar je mee aan de slag gaat.
+
+
+Screenshot:
+
+![React Playlist](./Screenshot-React-App.png)
