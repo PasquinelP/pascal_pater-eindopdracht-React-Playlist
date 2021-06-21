@@ -54,10 +54,13 @@ export const AppProvider = (props) => {
   const [sort, setSort] = useState(null);
 
   // sets which genre is selected for filtering
-  const [filteredGenre, setFilteredGenre] = useState("");
+  const [filteredGenre, setFilteredGenre] = useState("All");
+
+  // sets which rating is selected for filtering
+  const [filteredRating, setFilteredRating] = useState("All");
 
   return (
-    <AppContext.Provider value={{songs, setSongs, sort, setSort, filteredGenre, setFilteredGenre}}>
+    <AppContext.Provider value={{songs, setSongs, sort, setSort, filteredGenre, setFilteredGenre, filteredRating, setFilteredRating}}>
       {props.children}
     </AppContext.Provider>
   );
