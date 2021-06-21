@@ -5,7 +5,7 @@ import useApp from "./useApp";
 
 const SongList = () => {
 
-  const { deleteSongList, sortList, sortRating } = useApp();
+  const { sortList, sortRating } = useApp();
 
   return (
     <div className="song-list">
@@ -32,9 +32,6 @@ const SongList = () => {
           <Song />
         </tbody>
       </table>
-      <div className="song-list__delete">
-        <button onClick={deleteSongList}>Empty playlist</button>
-      </div>
     </div>
   );
 };

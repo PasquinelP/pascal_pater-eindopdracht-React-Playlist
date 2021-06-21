@@ -188,10 +188,19 @@ main {
   cursor: pointer;
 }
 
+.song-list__actions {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 /* delete button of complete song list */
 .song-list__delete {
-  display: flex;
-  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.filter-options label {
+  margin-right: 6px;
 }
 
 .about-page {
