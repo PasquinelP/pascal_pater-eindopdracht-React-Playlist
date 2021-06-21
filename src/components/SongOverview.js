@@ -1,14 +1,14 @@
 import React from 'react';
-import SongForm from './SongForm';
-import SongList from './SongList';
-import SongActions from './SongActions';
+import SongForm from './song/SongForm';
+import SongContainer from './song/SongContainer';
+import SongActions from './song/SongActions';
 
 const SongOverview = () => {
 
   return (
     <div className="song-overview">
       <SongForm />
-      <SongList />
+      <SongContainer />
       <SongActions />
     </div>
   );

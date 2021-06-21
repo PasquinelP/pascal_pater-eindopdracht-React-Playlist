@@ -1,15 +1,11 @@
 import React from "react";
-import Song from "./Song";
-import useApp from "./useApp";
+import SongList from "./SongList";
+import useApp from "../useApp";
 
-
-const SongList = () => {
-
+const SongTable = () => {
   const { sortList, sortRating } = useApp();
 
   return (
-    <div className="song-list">
-      <div className="song-list__message">* to sort click on column names</div>
       <table>
         <thead>
           <tr>
@@ -29,11 +25,10 @@ const SongList = () => {
           </tr>
         </thead>
         <tbody>
-          <Song />
+          <SongList />
         </tbody>
       </table>
-    </div>
   );
 };
 
-export default SongList;
+export default SongTable;

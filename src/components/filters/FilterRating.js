@@ -1,5 +1,5 @@
 import React from "react";
-import useApp from "./useApp";
+import useApp from "../useApp";
 
 const FilterRating = () => {
   const { filteredRating, handleRatingChange } = useApp();
