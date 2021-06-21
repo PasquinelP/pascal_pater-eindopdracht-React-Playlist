@@ -1,15 +1,12 @@
 import React from "react";
 import useApp from "./useApp";
 
-const Filter = () => {
-  
-  const { filteredGenre, filteredRating, handleGenreChange, handleRatingChange } = useApp();
-
+const FilterGenre = () => {
+  const { filteredGenre, handleGenreChange } = useApp();
 
   return (
-    <div className="filter-options">
-
-      {/* Filter genre */}
+    <>
+    
       <label htmlFor="filteredGenre">Filter genre:</label>
       <select
         value={filteredGenre}
@@ -28,23 +25,8 @@ const Filter = () => {
         <option value="Rock">Rock</option>
       </select>
 
-      {/* Filter rating */}
-      <label htmlFor="filteredRating">Filter rating:</label>
-      <select
-        value={filteredRating}
-        onChange={handleRatingChange}
-        name="filteredRating"
-      >
-        <option value="All">All ratings</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      
-    </div>
+    </>
   );
 };
 
-export default Filter;
+export default FilterGenre;

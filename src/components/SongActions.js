@@ -1,6 +1,6 @@
 import React from "react";
 import useApp from "./useApp";
-import Filter from "./Filter";
+import Filters from "./Filters";
 
 
 const SongActions = () => {
@@ -10,7 +10,7 @@ const SongActions = () => {
 
   return (
     <div className="song-list__actions">
-      <Filter />
+      <Filters />
       <div className="song-list__delete">
         <button onClick={deleteSongList}>Empty playlist</button>
       </div>
