@@ -1,6 +1,6 @@
 import React from "react";
-import useApp from "./useApp";
-import Filters from "./filters/Filters";
+import useApp from "../useApp";
+import Filters from "../filters/Filters";
 
 
 const SongActions = () => {

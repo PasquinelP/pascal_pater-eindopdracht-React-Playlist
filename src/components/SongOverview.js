@@ -1,7 +1,7 @@
 import React from 'react';
-import SongForm from './SongForm';
-import SongContainer from './SongContainer';
-import SongActions from './SongActions';
+import SongForm from './song/SongForm';
+import SongContainer from './song/SongContainer';
+import SongActions from './song/SongActions';
 
 const SongOverview = () => {
 

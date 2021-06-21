@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useApp from "./useApp";
+import useApp from "../useApp";
 
 const SongForm = () => {
   const { addSong } = useApp();

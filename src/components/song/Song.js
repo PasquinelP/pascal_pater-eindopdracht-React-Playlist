@@ -1,6 +1,6 @@
 import React from "react";
-import useApp from "./useApp";
-import DeleteIcon from "./DeleteIcon";
+import useApp from "../useApp";
+import DeleteIcon from "../DeleteIcon";
 
 const Song = (props) => {
   const { deleteListItem } = useApp();

@@ -1,6 +1,6 @@
 import React from "react";
 import SongList from "./SongList";
-import useApp from "./useApp";
+import useApp from "../useApp";
 
 const SongTable = () => {
   const { sortList, sortRating } = useApp();
