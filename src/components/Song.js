@@ -3,7 +3,23 @@ import useApp from "./useApp";
 import DeleteIcon from "./DeleteIcon";
 
 const Song = () => {
-  const { songs, deleteListItem, filteredList } = useApp();
+  const { songs, deleteListItem, filteredGenre, filteredRating } = useApp();
+
+  let filteredList = [...songs];
+
+  // filtering for genre
+  if (filteredGenre !== "All") {
+    filteredList = filteredList.filter((song) => {
+      return song.genre === filteredGenre;
+    });
+  }
+
+  // filtering for rating
+  if (filteredRating !== "All") {
+    filteredList = filteredList.filter((song) => {
+      return song.rating === parseInt(filteredRating);
+    });
+  }
 
   const song = filteredList.map((song) => (
     <tr className="song-list__item" key={song.id}>
